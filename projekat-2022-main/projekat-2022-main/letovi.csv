@@ -1,0 +1,40 @@
+ab01|yhd|ush|12:56|16:12|False|AirSerbia|[0, 1, 2, 3, 4, 5, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|130.12|2009-11-11 01:08:53|2009-11-21 02:08:53
+ab02|sss|sss|12:33|12:55|False|asfafas|[0, 4, 5, 6]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|44.44|2023-11-11 00:00:00|2023-11-21 00:00:00
+ab03|dhi|drk|11:50|12:15|False|FlyEmirates|[2, 5, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|250.34|2010-01-11 21:08:53|2010-02-08 23:10:43
+ab04|drk|uix|12:11|16:14|False|TurkishAirlines|[0, 1, 2]|{'id': 456, 'naziv': 'Boeing747', 'broj_redova': 36, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|1340.12|2011-02-01 06:00:00|2011-02-15 09:00:00
+ab05|mrk|ply|13:12|23:16|False|AirSerbia|[3, 4, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|5330.12|2012-03-09 02:08:53|2012-04-21 02:08:53
+ab06|ush|dir|14:05|20:17|False|FlyEmirates|[4, 5, 6]|{'id': 456, 'naziv': 'Boeing747', 'broj_redova': 36, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|800.0|2012-04-10 02:08:53|2012-04-18 02:08:53
+ab07|mrs|uix|00:45|15:22|False|QatarAirways|[0]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|300.45|2013-05-11 02:08:53|2013-05-21 02:08:53
+ab08|dir|yhd|16:15|22:19|False|AirSerbia|[1, 2]|{'id': 456, 'naziv': 'Boeing747', 'broj_redova': 36, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|900.0|2013-06-02 02:08:53|2013-08-08 02:08:53
+ab09|eee|eee|12:33|12:45|False|AirSerbia|[0]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|344.33|2023-11-11 00:00:00|2023-11-13 00:00:00
+ab10|sss|sss|12:44|12:45|False|dsgsg|[2, 3, 4, 5, 6]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|46.4|2023-11-11 00:00:00|2023-11-21 00:00:00
+ab11|mrs|drk|00:00|15:20|False|FlyEmirates|[1, 2, 6]|{'id': 122, 'naziv': 'AirbusA350', 'broj_redova': 20, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|730.98|2016-09-02 02:08:53|2016-09-22 02:08:53
+ab12|mrk|srk|20:19|21:29|False|AirSerbia|[1, 6]|{'id': 456, 'naziv': 'Boeing747', 'broj_redova': 36, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|213.65|2016-10-03 02:08:53|2016-09-25 02:08:53
+ab13|eee|eee|12:33|12:55|False|AirSerbia|[0]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|344.33|2023-11-11 00:00:00|2023-11-18 00:00:00
+ab14|ssa|ssa|12:12|12:33|False|sfdgdfsh|[1, 2, 3, 4]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|66.66|2023-11-11 00:00:00|2023-11-19 00:00:00
+ab15|yhd|ply|00:00|23:59|False|QatarAirways|[0, 1, 2]|{'id': 456, 'naziv': 'Boeing747', 'broj_redova': 36, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|999.99|2018-09-15 02:08:53|2018-10-18 02:08:53
+ab16|srk|mrk|05:05|14:00|False|TurkishAirlines|[0, 1, 4, 5, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|540.98|2019-01-18 02:08:53|2019-01-20 02:08:53
+ab17|ply|drk|04:45|08:05|False|QatarAirways|[4, 5]|{'id': 456, 'naziv': 'Boeing747', 'broj_redova': 36, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|30.99|2022-12-20 02:08:53|2023-01-29 02:08:53
+ab18|ply|dhi|03:30|23:30|False|QatarAirways|[5]|{'id': 122, 'naziv': 'AirbusA350', 'broj_redova': 20, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|800.654|2022-11-28 02:08:53|2022-12-31 02:08:53
+ab19|uix|kir|09:45|16:18|False|TurkishAirlines|[6]|{'id': 122, 'naziv': 'AirbusA350', 'broj_redova': 20, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|1.0|2021-10-12 02:08:53|2021-11-30 02:08:53
+ab20|kir|uix|08:45|12:18|False|TurkishAirlines|[4, 6]|{'id': 122, 'naziv': 'AirbusA350', 'broj_redova': 20, 'pozicije_sedista': ['A', 'B', 'C', 'D']}|1.0|2023-01-11 02:08:53|2023-11-20 02:08:53
+ab21|yhd|mrk|12:00|20:30|False|AirSerbia|[0, 3, 5, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|450.5|2023-03-03 00:00:00|2023-03-18 00:00:00
+ab22|eee|eee|12:33|12:55|False|AirSerbia|[4]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|222.22|2023-11-11 00:00:00|2023-11-18 00:00:00
+ab23|srk|ply|12:45|15:45|False|AirSerbia|[0, 1, 2, 3]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|450.4|2023-02-01 00:00:00|2023-02-11 00:00:00
+ab24|uix|drk|12:00|13:00|False|AirSerbia|[0, 5, 6]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|450.77|2023-11-11 00:00:00|2023-11-24 00:00:00
+ab25|mrk|mrk|15:45|16:00|False|AirSerbia|[0, 5, 6]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|100.56|2023-11-11 00:00:00|2023-11-19 00:00:00
+ab26|ply|uix|12:00|15:00|False|QatarAirways|[0, 4, 5]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|120.556|2023-02-09 00:00:00|2023-02-20 00:00:00
+ab27|ply|srk|21:45|22:55|False|AirSerbia|[0, 4, 5]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|100.2|2023-10-10 00:00:00|2023-10-21 00:00:00
+ab28|uix|uix|12:44|13:44|False|AirSerbia|[1, 4, 6]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|400.44|2023-12-12 00:00:00|2023-12-23 00:00:00
+ab29|yhd|mrk|15:45|16:45|False|AirSerbia|[1, 5, 6]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|100.4|2023-09-09 00:00:00|2023-09-16 00:00:00
+ab30|srk|srk|12:00|12:15|False|AirSerbia|[1, 2, 3, 4, 5]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|450.44|2023-01-05 00:00:00|2023-01-25 00:00:00
+ab31|sss|sss|12:33|12:59|False|fdfg|[0, 4, 5, 6]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|4.4|2023-11-11 00:00:00|2023-11-18 00:00:00
+ab32|uix|uix|12:15|12:30|False|AirSerbia|[0, 3, 4, 5]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|450.5|2022-11-11 00:00:00|2022-11-21 00:00:00
+ab33|mrk|srk|12:12|12:55|True|AirSerbia|[0, 1, 2, 3, 4, 5, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|123.123|2024-11-11 00:00:00|2024-11-27 00:00:00
+ab34|srk|srk|12:45|12:55|False|AirSerbia|[0, 1, 4, 5]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|450.4|2023-05-05 00:00:00|2023-05-15 00:00:00
+ab35|sss|ddd|12:33|14:55|False|sssdasg|[0, 3, 4, 5]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|33.33|2023-11-11 00:00:00|2023-11-19 00:00:00
+ab36|ply|uix|12:55|16:45|False|AirSerbia|[0, 3, 4, 5, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|500.5|2023-10-10 00:00:00|2023-10-18 00:00:00
+ab37|eee|eee|12:45|12:55|True|AirSerbia|[0, 1, 2, 3]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|345.55|2023-11-11 00:00:00|2023-11-20 00:00:00
+ab38|srk|srk|12:22|15:22|False|AirSerbia|[0, 1, 2, 3, 4]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|450.4|2023-05-05 00:00:00|2023-05-16 00:00:00
+ab39|ush|ply|12:45|17:45|False|AirSerbia|[0, 4, 5]|{'id': 111, 'naziv': 'AirbusA320', 'broj_redova': 4, 'pozicije_sedista': ['A', 'B', 'C']}|345.5|2023-11-10 00:00:00|2023-11-19 00:00:00
+ab40|eee|eee|12:45|12:55|False|AirSerbia|[0, 4, 5, 6]|{'id': 123, 'naziv': 'Boeing737', 'broj_redova': 24, 'pozicije_sedista': ['A', 'B', 'C']}|333.33|2023-11-11 00:00:00|2023-11-19 00:00:00

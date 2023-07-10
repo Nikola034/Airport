@@ -1,0 +1,103 @@
+from common import konstante
+from functools import reduce
+from datetime import datetime
+import csv
+
+"""
+Kupovina karte proverava da li prosleđeni konkretni let postoji i da li ima slobodnih mesta. U tom slučaju se karta 
+dodaje  u kolekciju svih karata. Slobodna mesta se prosleđuju posebno iako su deo konkretnog leta, zbog lakšeg 
+testiranja. Baca grešku ako podaci nisu validni.
+CHECKPOINT 2: kupuje se samo za ulogovanog korisnika i bez povezanih letova.
+ODBRANA: moguće je dodati saputnike i odabrati povezane letove. 
+"""
+sledeci_broj_karte = 1
+
+def kupovina_karte(
+    sve_karte: dict,
+    svi_konkretni_letovi: dict,
+    sifra_konkretnog_leta: int,
+    putnici: list,
+    slobodna_mesta: list,
+    kupac: dict,
+    **kwargs
+) -> dict:
+    if sifra_konkretnog_leta not in svi_konkretni_letovi:
+        raise Exception("Uneti konkretni let ne postoji!")
+    if kupac["uloga"] != konstante.ULOGA_KORISNIK:
+        raise Exception("Prodavac ne moze da kupi kartu!")
+    for key in kwargs:
+        if kwargs[key]["uloga"] != konstante.ULOGA_PRODAVAC:
+            raise Exception("Prodavac mora da proda kartu!")
+        break
+    global sledeci_broj_karte
+    karta = {
+        "broj_karte": sledeci_broj_karte,
+        "datum_prodaje": kwargs["datum_prodaje"],
+        "kupac": kupac,
+        "prodavac": kwargs["prodavac"],
+        "obrisana": False,
+        "putnici": putnici,
+        "sifra_konkretnog_leta": sifra_konkretnog_leta,
+        "status": konstante.STATUS_NEREALIZOVANA_KARTA
+    }
+    sledeci_broj_karte += 1
+    return karta
+
+"""
+Vraća sve nerealizovane karte za korisnika u listi.
+"""
+def pregled_nerealizovanaih_karata(korisnik: dict, sve_karte: dict) -> list:
+    lista = []
+    for karta in sve_karte:
+        if karta["putnici"][0]["korisnicko_ime"] == korisnik["korisnicko_ime"] and karta["status"] == konstante.STATUS_NEREALIZOVANA_KARTA:
+            lista.append(karta)
+    return lista
+
+
+"""
+ Funkcija brisanja karte se ponaša drugačije u zavisnosti od korisnika:
+- Prodavac: karta se označava za brisanje
+- Admin/menadžer: karta se trajno briše
+Kao rezultat se vraća nova kolekcija svih karata. Baca grešku ako podaci nisu validni.
+"""
+def brisanje_karte(korisnik: dict, sve_karte: dict, broj_karte: int) -> dict:
+    if korisnik["uloga"] == konstante.ULOGA_PRODAVAC:
+        sve_karte[broj_karte]["obrisana"] = True
+    elif korisnik["uloga"] == konstante.ULOGA_ADMIN:
+        del sve_karte[broj_karte]
+    else:
+        raise Exception("Pogresna uloga!")
+    return sve_karte
+
+
+"""
+Funkcija koja čuva sve karte u fajl na zadatoj putanji.
+"""
+def sacuvaj_karte(sve_karte: dict, putanja: str, separator: str):
+    with open(putanja, 'w') as file:
+        polja = ("broj_karte", "sifra_konkretnog_leta", "kupac", "prodavac", "sifra_sedista", "datum_prodaje", "obrisana")
+        writer = csv.DictWriter(file, fieldnames=polja, delimiter=separator)
+        for karta in sve_karte:
+            writer.writerow(sve_karte[karta])
+        file.close()
+
+
+"""
+Funkcija koja učitava sve karte iz fajla i vraća ih u rečniku.
+"""
+def ucitaj_karte_iz_fajla(putanja: str, separator: str) -> dict:
+    with open(putanja, 'r') as file:
+        polja = ("broj_karte", "sifra_konkretnog_leta", "kupac", "prodavac", "sifra_sedista", "datum_prodaje", "obrisana")
+        reader = csv.DictReader(file, fieldnames=polja, delimiter=separator)
+        karte = {}
+        for row in reader:
+            row["broj_karte"] = int(row["broj_karte"])
+            row["sifra_konkretnog_leta"] = int(row["sifra_konkretnog_leta"])
+            if row["obrisana"] == "True":
+                row["obrisana"] = True
+            else:
+                row["obrisana"] = False
+            karte[row["broj_karte"]] = row
+        file.close()
+        return karte
+

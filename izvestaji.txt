@@ -1,0 +1,66 @@
+from datetime import datetime, date
+from functools import reduce
+
+def izvestaj_prodatih_karata_za_dan_prodaje(sve_karte: dict, dan: datetime)->list:
+    lista = []
+    for karta in sve_karte:
+        if sve_karte[karta]["datum_prodaje"] == dan:
+            lista.append(sve_karte[karta])
+    return lista
+
+def izvestaj_prodatih_karata_za_dan_polaska(sve_karte: dict, svi_konkretni_letovi: dict, dan: date):
+    lista = []
+    for karta in sve_karte:
+        if svi_konkretni_letovi[sve_karte[karta]["sifra_konkretnog_leta"]]["datum_i_vreme_polaska"] == dan:
+            lista.append(sve_karte[karta])
+    return lista
+
+def izvestaj_prodatih_karata_za_dan_prodaje_i_prodavca(sve_karte: dict, dan: date, prodavac: str):
+    lista = []
+    for karta in sve_karte:
+        if sve_karte[karta]["prodavac"] == prodavac and sve_karte[karta]["datum_prodaje"] == dan:
+            lista.append(sve_karte[karta])
+    return lista
+
+def izvestaj_ubc_prodatih_karata_za_dan_prodaje(
+    sve_karte: dict,
+    svi_konkretni_letovi: dict,
+    svi_letovi,
+    dan: date
+) -> tuple:
+    broj = cena = 0
+    for karta in sve_karte:
+        if sve_karte[karta]["datum_prodaje"] == dan:
+            broj += 1
+            cena += svi_letovi[svi_konkretni_letovi[sve_karte[karta]["sifra_konkretnog_leta"]]["broj_leta"]]["cena"]
+    return (broj, cena)
+
+
+
+def izvestaj_ubc_prodatih_karata_za_dan_polaska(sve_karte: dict, svi_konkretni_letovi: dict, svi_letovi: dict, dan: date): #ubc znaci ukupan broj i cena
+    broj = cena = 0
+    for karta in sve_karte:
+        if svi_konkretni_letovi[sve_karte[karta]["sifra_konkretnog_leta"]]["datum_i_vreme_polaska"] == dan:
+            broj += 1
+            cena += svi_letovi[svi_konkretni_letovi[sve_karte[karta]["sifra_konkretnog_leta"]]["broj_leta"]]["cena"]
+    return (broj, cena)
+
+def izvestaj_ubc_prodatih_karata_za_dan_prodaje_i_prodavca(sve_karte: dict, konkretni_letovi: dict, svi_letovi: dict, dan: date, prodavac: str): #ubc znaci ukupan broj i cena
+    broj = cena = 0
+    for karta in sve_karte:
+        if sve_karte[karta]["datum_prodaje"] == dan and sve_karte[karta]["prodavac"] == prodavac:
+            broj += 1
+            cena += svi_letovi[konkretni_letovi[sve_karte[karta]["sifra_konkretnog_leta"]]["broj_leta"]]["cena"]
+    return (broj, cena)
+
+def izvestaj_ubc_prodatih_karata_30_dana_po_prodavcima(sve_karte: dict, svi_konkretni_letovi: dict, svi_letovi: dict)->dict: #ubc znaci ukupan broj i cena
+    ubc = {
+        "broj": 0,
+        "cena": 0
+    }
+    for karta in sve_karte:
+        if datetime.now().day - datetime.strptime(sve_karte[karta]["datum_prodaje"], '%m/%d/%y')<= 30:
+            pass
+    return ubc
+
+
